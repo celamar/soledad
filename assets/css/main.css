@@ -29,7 +29,10 @@ h2 {
  	margin-bottom: 51px;
  }
 
-/* barre de navigation */
+
+
+
+/*--------- barre de navigation ---*/
 
 .nav li {
 	font-family: 'Playfair Display', serif;
@@ -50,9 +53,12 @@ h2 {
 	-moz-transition: all 0.2s;
 }
 
-/* fin navbar */
+/*---------- fin navbar ----------*/
 
-/* header*/
+
+
+/*---------- header --------------*/
+
 .tete{
   height: 300px;
   background-color: #f5f5f5;
@@ -88,25 +94,36 @@ h2 {
 	margin: auto;
 }
 
-.header-slogan .slogan::before, .header-slogan .slogan::after {
+.header-slogan .slogan::before {
 	content: "";
 	height: 1px;
 	display: block;
 	width: 60px;
 	background: #dedede;
   	vertical-align: middle;
+	position: relative;
+	top: 11px;
+	left: 15px;
 }
 
 .header-slogan .slogan::after {
-	left: auto;
-	right: 100%;
+	content: "";
+	height: 1px;
+	display: block;
+	width: 60px;
+	background: #dedede;
+  	vertical-align: middle;
+	position: relative;
+	top: -11px;
+	left: 100%;
+    transform: translateX(-75px);
 }
 
-/* carousel*/
+/*---------- fin de header --------*/
 
-.slides{
-  position: ;
-}
+
+
+/*---------- carousel -------------*/
 
 div.carouselll {
   width: 100%;
@@ -157,14 +174,39 @@ div.carouselll {
     left: 50%;
     margin-left: -60px;
 }
+
 .feat-time:after {
-    border-left-color: #000000;
-    right: -32px;
-}
-.feat-time:before {
-    border-left-color: #000000;
+    background: #000000;
     left: -32px;
+	content: "";
+	display: inline-block;
+	font-size: 12px;
+	position: absolute;
+	left: 91.2%;
+	top: 5px;
+	width: 22px;
+	height: 22px;
+	transform: rotate(45deg);
+	-moz-transform: rotate(45deg);
+	-webkit-transform: rotate(45deg);
 }
+
+.feat-time:before {
+    background: #000000;
+    left: -32px;
+	content: "";
+	display: inline-block;
+	font-size: 12px;
+	position: absolute;
+	left: -9.6%;
+	top: 5px;
+	width: 22px;
+	height: 22px;
+	transform: rotate(45deg);
+	-moz-transform: rotate(45deg);
+	-webkit-transform: rotate(45deg);
+}
+
 .rectBord:before {
     top: 5px;
     left: 5px;
@@ -205,21 +247,13 @@ div.carouselll {
 	-moz-transition: 2s;
 }
 
-/*----- fin du carousel-----/*/
+/*--------- fin du carousel -------/*/
 
 
 
-.header-maison {
-	padding-top: 100px;
-	position: relative;
-}
 
+/*--------- Articles ---------------*/
 
-/*
-.img-corps {
-	margin-bottom: 28px;
-}
-*/
 .img-responsive {
 	width: 100%;
 }
@@ -266,30 +300,6 @@ div.carouselll {
     margin: 0 0 5px 0;
 }
 
-/*
-.category > a.a-cat::after {
-	content: "";
-	display: inline-block;
-	border: 1px solid #6eb48c;
-	font-size: 12px;
-	margin-left: 11px;
-	width: 3px;
-	height: 3px;
-	transform: rotate(45deg);
-	-moz-transform: rotate(45deg);
-	-webkit-transform: rotate(45deg);
-	border-color: #a60505;
-}
-
-.category > a.a-cat {
-	color: #a60505;
-	font-size: 12px;
-	line-height: 1.2;
-	margin: 0 18px 0 0;
-	vertical-align: top;
-}
-*/
-
 .category > a.a-cat, .feat-category > a.a-cat {
 	font-size: 12px;
 	color: #a60505;
@@ -316,8 +326,8 @@ div.carouselll {
 	position: absolute;
 	top: 50%;
 	margin-top: -3px;
-	width: 3px;
-	height: 3px;
+	width: 5px;
+	height: 5px;
 	transform: rotate(45deg);
 	-moz-transform: rotate(45deg);
 	-webkit-transform: rotate(45deg);
@@ -431,18 +441,55 @@ div.carouselll {
  	margin-left: 0;
  }
 
+/*-------- Fin articles -----------*/
 
- /*pagination*/
+
+
+
+/*------- pagination --------------*/
 
 .aaa{
-	text-align: center;
+	display: inline;
+	width: 100%;
 }
 
-/*ROW pour about me*/
+.pagination {
+	display: block;
+	position: absolute;
+	left: 48%;
+	margin: auto;
+
+}
+
+.pagination > li > a.current-page {
+	color: #fff;
+    background: #a60505;
+    border-color: #a60505;
+}
+
+.pagination > li > a.current-page:focus {
+	color: #fff;
+    background: #a60505;
+    border-color: #a60505;
+}
+
+/*------- fin de pagination --------*/
+
+.widget-area{
+	overflow: hidden;
+    margin: 0;
+    padding: 30px 0;
+    background: #ffffff;
+    position: relative;
+    border-top: 1px solid #ECECEC;
+    z-index: 2;
+}
+
+/*------- ROW pour about me --------*/
 
 .titre-about{
-    font-family: 'Playfair Display', serif;
-    font-weight: 900;
+    font-family: 'Raleway', 'sans serif';
+    font-weight: bold;
     color: #313131;
     font-size: 16px;
     letter-spacing: 1px;
@@ -451,6 +498,17 @@ div.carouselll {
     margin-bottom: 3px;
 }
  
+.descriptionAbout {
+	margin-top: 18px;
+    text-align: left;
+    color: #313131;
+    font-family: 'Lato', 'sans-serif';
+    font-size: 14px;
+    line-height: 28px;
+    font-size: 14px;
+}
+
+
 .ligne2{
     border-top: solid 1px #313131;
     padding-top: 20px;
@@ -462,18 +520,28 @@ div.carouselll {
     padding-top: 20px;
 }
 
-.col-lg-7 p{
-    font-family: 'Lato', sans-serif;
-    color: #939393;
+.col-lg-7 .col-lg-4 {
+    margin: 0px;
+    padding: 0px;
 }
 
-h4 {
-	font-family: 'Playfair Display', serif;
+.col-lg-5{
+	align-items: left;
+}
+
+
+.col-lg-7 p{
+    font-family: 'Lato', sans-serif;
+    color: #888888;  
+}
+
+h4 a{
+	font-family: 'Playfair', serif;
     color: #313131;
-	font-size: 14px;
-	font-weight: 900;
+	font-size: 18px;
+	font-weight: bold;
 	display:inline-block;
-	text-decoration: none;
+	letter-spacing: 0;
 
 }
 
@@ -488,6 +556,7 @@ h4 a:hover{
 }
 
 
+
 .col-lg-4 .row{
     border-bottom: 1px solid #dedede;
     padding-bottom: 17px;
@@ -500,24 +569,43 @@ h4 a:hover{
 
 
 
-/*liste instagram*/
+/*-------- liste instagram --------*/
 
 /*-------- lignes d'images --------*/
 
 
-.imag_instagram{
-	position:relative; 
-}
 
 .instagram{
  margin:0;
  padding: 0;
 }
 
+.taille{
+	width:200px;
+	height:200px;
+}
+
+/*
+.borde {
+    border-top: 5px;
+    border-left: 5px;
+    border-bottom: 5px;
+    border-right: 5px;
+    position: absolute;
+    border: 1px solid white;
+    display: block;
+    z-index: 5;
+    content: "";
+}
+
+*/
+
+
+
 p.carre{
 	position: absolute;
 	margin-left: calc(50% - 90px);
-	margin-top: 2%;
+	margin-top: 5%;
 	background-color: white;
 	z-index: 1;
 	font-size: 12px;
@@ -532,15 +620,9 @@ p.carre{
 
 
 
-.aboutpic , .insta{
-    border-top: solid 1px #313131;
-    padding-top: 20px;
-}
-
-
 footer{
 	background-color: #212121;
-	height: 500px;
+	height: 550px;
 }
 
 .copyrigth{
@@ -548,8 +630,16 @@ footer{
 	font-style: italic;
 }
 
-/* SOCIAL ICONS FOOTER */
 
+
+
+
+
+/*-------- SOCIAL ICONS FOOTER ----*/
+
+.padTop{
+	padding-top: 30px;
+}
 
 .social a {
   display: inline-block;
@@ -557,45 +647,62 @@ footer{
 }
 
 .social i {
- 
   text-align: center;
   padding-top: 12px;
 }
 
 ul#enligne li {
 	display:inline  ;
-    margin-left: 10px;
-    margin-right: 10px;
+    margin-right: 30px;
     color: #999;
-
 }
- 
- 
+
 ul#enligne li a span {
 	color: #999;
 	-webkit-transition: all 0.3s;
 	-moz-transition: all 0.3s;
 	-o-transition: all 0.3s;
 	transition: all 0.3s;
+    font-weight: bold;
+    font-family: 'Playfair Display', serif;
+    letter-spacing: 1px;
+    margin-left: 10px;
 }
+
 ul#enligne li a:hover span {
 	color: #FFFFFF;
 }
+
 ul#enligne li a:hover i {
 	background: #FFFFFF;
 	color: #999;
 	border-color: #999;
 }
 
- 
+/*.social {
+	border-bottom: 1px solid #4A4A4A;
+	padding-bottom: 15px;
+}*/
+
+
+hr{ /*ligne gris*/
+  margin: 30px auto;
+  margin-bottom: 0px;
+  width: 74%;
+  height: 1px;
+  background-color: #4A4A4A;
+  border: none; /*on supprime le style par défaut*/
+}
+
+/*
 .social::after {
 	display: inline-block;
 	border: 0.1px solid #A9A9A9;
 	width : 80%;
 }
+*/
 
-
-/*circles icons */
+/*-------- circles icons ----------*/
 
 .rond-footer{
     width: 36px;
@@ -608,6 +715,49 @@ ul#enligne li a:hover i {
     font-size: 14px;
     transition: all 0.2s ease-in-out;
 }
- 
 
- 
+
+/* = Footer go to top
+-----------------------------------------------------*/
+footer .go-to-top-parent {
+	width: 100%;
+	height: auto;
+	display: block;
+	text-align: center;
+	z-index: 10;
+}
+footer .go-to-top-parent span {
+	color: #999;
+	font-size: 12px;
+	font-weight: bold;
+	font-family: 'Raleway', sans-serif;
+	text-transform: uppercase;
+	line-height: 1;
+	display: inline-block;
+	transition: all 0.3s;
+	-webkit-transition: all 0.3s;
+	-moz-transition: all 0.3s;
+}
+footer .go-to-top-parent span:before,
+footer .go-to-top-parent span:after {
+	content: " ";
+	display: table;
+}
+footer .go-to-top-parent span:after {
+	clear: both;
+}
+footer .go-to-top-parent i {
+	font-size: 18px;
+	z-index: 5;
+	position: relative;
+	transition: all 0.3s;
+	-webkit-transition: all 0.3s;
+	-moz-transition: all 0.3s;
+	color: #999;
+	line-height: 1;
+	margin-bottom: 3px;
+}
+footer .go-to-top:hover span,
+footer .go-to-top:hover i {
+	color: #fff;
+}
